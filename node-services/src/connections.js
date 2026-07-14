@@ -14,6 +14,6 @@ export async function connectRabbit() {
   const connection = await amqp.connect(config.rabbitUrl);
   rabbit = await connection.createChannel();
   await rabbit.assertExchange('commerce.events', 'topic', { durable: true });
+  await rabbit.assertExchange('commerce.dlx', 'direct', { durable: true });
   return rabbit;
 }
-
