@@ -15,4 +15,3 @@ spring:
     password: ${RABBITMQ_PASSWORD:guest}
 management.endpoints.web.exposure.include: health,info
 security.jwt.secret: ${JWT_SECRET:development-secret-change-me-32-chars}
-
