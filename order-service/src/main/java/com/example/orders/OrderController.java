@@ -18,6 +18,7 @@ class OrderController {
   }
 
   record CreateOrder(String customerEmail, List<Item> items) {
+    
   }
 
   private final OrderRepository repository;
