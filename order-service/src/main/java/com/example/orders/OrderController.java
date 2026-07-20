@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/orders")
 class OrderController {
   record Item(String sku, int quantity, BigDecimal unitPrice) {
+  
   }
 
   record CreateOrder(String customerEmail, List<Item> items) {
